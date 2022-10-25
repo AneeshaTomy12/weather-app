@@ -1,0 +1,277 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&family=Raleway&display=swap'); */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Sofia", sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
+    background: url('https://images.unsplash.com/photo-1604238237408-1f5372ae76cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.container {
+    padding: 20px 70px;
+    color: #fff;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.date {
+    font-weight: 100;
+}
+
+.date .time {
+    font-size: 50px;
+}
+
+.date #am-pm {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.date .date-now {
+    font-size: 20px;
+}
+
+.place {
+    text-align: end;
+}
+
+.place .timeZone {
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.place .country {
+    font-size: 15px;
+    font-weight: 700;
+    padding-bottom: 1em;
+}
+
+.main .weather {
+    display: flex;
+    flex-direction: column;
+    background: rgba(24, 24, 27, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: solid 1px #eee;
+    line-height: 2em;
+}
+
+.main .weather .weather-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-forcast {
+    left: 0;
+    background: rgba(24, 24, 27, 0.8);
+    padding: 2em;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-forcast .today {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.weather-forcast .today .day {
+    padding: 5px 15px;
+    background: #3c3c44;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.weather-forcast .today .days {
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+.weather-forcast .future-forcast {
+    display: flex;
+}
+
+.future-forcast .future-forcast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    line-height: 1.5em;
+}
+
+.future-forcast .future-forcast-item .day {
+    padding: 5px 15px;
+    background: #3c3c44;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.future-forcast .future-forcast-item .days {
+    font-weight: 100;
+}
+
+.card {
+    background: rgb(0 0 0 / 75%);
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    line-height: 3em;
+    justify-content: center;
+    text-align: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+}
+
+button {
+    margin: 0.5em;
+    border-radius: 47%;
+    border: none;
+    height: 51px;
+    width: 60px;
+    outline: none;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+input.search-bar {
+    border: none;
+    outline: none;
+    padding: 1.2em 1em;
+    border-radius: 24px;
+    background: #c797972b;
+    color: white;
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100% - 100px);
+}
+
+button:hover {
+    background: #7c7c7c6b;
+}
+
+h1.temp {
+    margin: 0;
+    margin-bottom: 0.4em;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+    text-transform: capitalize;
+    margin-left: 8px;
+}
+
+.weatherr.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.weatherr.loading:after {
+    visibility: visible;
+    /* content: "Loading..."; */
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 20px 70px;
+        color: #fff;
+    }
+
+    .date .time {
+        font-size: 30px;
+    }
+
+    .date #am-pm {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+
+    .date .date-now {
+        font-size: 10px;
+        padding-bottom: 1em;
+    }
+
+    .place {
+        text-align: end;
+    }
+
+    .place .timeZone {
+        font-size: 12px;
+        font-weight: 100;
+    }
+
+    .place .country {
+        font-size: 8px;
+        padding-bottom: 1em;
+    }
+
+    .card {
+        line-height: 2em;
+        margin-top: 12%;
+    }
+
+    .weather-forcast {
+        background: rgba(24, 24, 27, 0.8);
+        padding: 1em;
+        overflow-x: scroll;
+    }
+
+    .weather-forcast .today {
+        padding-left: 1px;
+        margin-left: 145px;
+    }
+
+    input.search-bar {
+        padding: 0.2em 1em;
+    }
+
+    button {
+        border-radius: 50%;
+        height: 31px;
+        width: 30px;
+    }
+}
